@@ -29,17 +29,6 @@
 
 <body>
   <header>
-    <!-- LOGO -->
-    <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <div class="logo bg-success rounded-circle text-center h1 text-white">
-            GREEENY
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Navbar -->
     <?= $this->include('navbar') ?>
   </header>
