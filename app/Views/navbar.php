@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-success">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="">
-      <img src="" height="40">
+<header class="navbar navbar-expand-md navbar-dark bg-success">
+  <div class="container-xxl flex-wrap flex-md-nowrap">
+    <a class="navbar-brand" href="/">
+      <img src="/assets/img/GREEN-GROCERY-logos_transparent.png" height="40">
     </a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <form class="d-flex w-50 me-auto">
@@ -13,21 +13,18 @@
         </div>
       </form>
       <ul class="navbar-nav mb-2 mb-lg-0 fs-5">
-        <li class="nav-item" title="Beranda">
-          <a class="nav-link active" href="Home/">
-            <i class="fa fa-home" aria-hidden="true"></i>
-          </a>
-        </li>
         <li class="nav-item" title="Keranjang">
           <a class="nav-link active" href="Cart/">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
           </a>
         </li>
+        <li class="vr mx-2 text-white"></li>
         <li class="nav-item" title="Pengiriman">
           <a class="nav-link active" href="Delivery/">
             <i class="fa fa-truck" aria-hidden="true"></i>
           </a>
         </li>
+        <li class="vr mx-2 text-white"></li>
         <li class="nav-item" title="Akun">
           <a class="nav-link active" href="Account/">
             <i class="fa fa-user-circle" aria-hidden="true"></i>
@@ -36,4 +33,4 @@
       </ul>
     </div>
   </div>
-</nav>
+</header>

@@ -28,10 +28,9 @@
 </head>
 
 <body>
-  <header>
-    <!-- Navbar -->
-    <?= $this->include('navbar') ?>
-  </header>
+
+  <!-- Navbar -->
+  <?= $this->include('navbar') ?>
 
   <!-- Main Content -->
   <?= $this->renderSection('content') ?>
