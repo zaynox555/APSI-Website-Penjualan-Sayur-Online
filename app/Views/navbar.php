@@ -67,7 +67,7 @@
                   <label class="form-check-label" for="selectAll">Pilih Semua</label>
                 </div>
                 <div class="col text-end">
-                  <button type="button" class="btn btn-outline-danger" onclick="$('.item-check-group input:checkbox').each(function(index, element){this.checked ? $(this).parent('card').remove() : false});">
+                  <button type="button" class="btn btn-outline-danger" onclick="$('.item-check-group input:checkbox').each(function(index, element){this.checked ? $(this).parents('.card').remove() : false});">
                     <i class="fa fa-trash" aria-hidden="true"></i> Hapus
                   </button>
                 </div>
@@ -110,19 +110,19 @@
 
                   <!-- Address -->
                   <div class="card-body">
-                    <div class="form-group">
-                      <label for="address">Alamat Pengiriman</label>
-                      <textarea class="form-control" rows="3"></textarea>
+                    <div class="mb-3">
+                      <label for="address" class="form-labels">Alamat Pengiriman</label>
+                      <textarea class="form-control" rows="3" name="address" id="address"></textarea>
                     </div>
 
-                    <div class="form-group">
-                      <label for="phone">Nomor Telepon</label>
-                      <input type="text" class="form-control" placeholder="081234567890">
+                    <div class="mb-3">
+                      <label for="phone" class="form-labels">Nomor Telepon</label>
+                      <input type="text" class="form-control" name="phone" id="phone" placeholder="081234567890">
                     </div>
 
-                    <div class="form-group">
-                      <label for="note">Catatan</label>
-                      <textarea class="form-control" rows="2"></textarea>
+                    <div class="mb-3">
+                      <label for="note" class="form-labels">Catatan</label>
+                      <textarea class="form-control" name="note" id="note" rows="2"></textarea>
                     </div>
                   </div>
 
