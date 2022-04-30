@@ -32,7 +32,7 @@
                   </div>
                   <label class="form-check-label" for="<?= 'item' . ($i + 1) ?>">
                     <div class="row g-0">
-                      <div class="col-2 row g-0 align-items-center">
+                      <div class="col-2 d-flex align-items-center">
                         <img src="/assets/img/sayuran/tomat.jpg" class="img-fluid">
                       </div>
                       <div class="col-10 row g-0 ps-3 align-items-center">
