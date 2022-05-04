@@ -13,7 +13,7 @@
             <div class="col-10 ps-3 row g-0 align-items-center">
               <div class="col-12 fs-5 text-truncate"><?= 'Barang ' . ($i + 1) ?></div>
               <div class="col-12 h5 mb-0"><?= 'Rp. XXX.XXX' ?></div>
-              <div class="col-6">Jumlah: <?= 'x' ?></div>
+              <div class="col-6">Jumlah: <?= 99 ?></div>
               <div class="col-6 text-muted">Status: <?= 'Sedang dikirim ke alamat tujuan' ?></div>
             </div>
           </div>

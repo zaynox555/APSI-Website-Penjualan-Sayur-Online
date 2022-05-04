@@ -2,10 +2,10 @@
 
 namespace App\Controllers;
 
-class Checkout extends BaseController
+class Register extends BaseController
 {
     public function index()
     {
-        return view('checkout.php');
+        return view('register.php');
     }
 }

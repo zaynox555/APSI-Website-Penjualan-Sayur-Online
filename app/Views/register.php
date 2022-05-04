@@ -1,4 +1,4 @@
-<?= $this->extend('template-navbar') ?>
+<?= $this->extend('template') ?>
 
 <?= $this->section('content') ?>
 <div class="container">
