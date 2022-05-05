@@ -13,8 +13,8 @@
       <div class="col-4">
         <div class="card rounded-3">
           <div class="card-body">
-            <h5 class="card-title mb-3">Login</h5>
-            <form class="row row-cols-1 g-0" action="/login" method="POST">
+            <h5 class="card-title text-center mb-3">Login</h5>
+            <form class="row row-cols-1 g-0" method="POST">
               <div class="col mb-3">
                 <label for="exampleInputEmail1">Email</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
@@ -23,18 +23,20 @@
                 <label for="exampleInputPassword1">Password</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
               </div>
-              <div class="col mb-1">
-                <button type="submit" class="btn btn-success w-100">Login</button>
+              <div class="col">
+                <button type="submit" class="btn btn-success w-100">Masuk</button>
               </div>
-              <div class="col-5">
-                <hr>
-              </div>
-              <div class="col-2 text-center">OR</div>
-              <div class="col-5">
-                <hr>
+              <div class="col my-2 d-flex">
+                <div class="col-5">
+                  <hr>
+                </div>
+                <div class="col-2 text-center">ATAU</div>
+                <div class="col-5">
+                  <hr>
+                </div>
               </div>
               <div class="col">
-                <a class="btn btn-outline-secondary w-100" href="/register">Register</a>
+                <a class="btn btn-outline-secondary w-100" href="/Register/">Daftar</a>
               </div>
           </div>
         </div>

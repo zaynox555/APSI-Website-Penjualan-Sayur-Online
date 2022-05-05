@@ -6,6 +6,11 @@ class Register extends BaseController
 {
     public function index()
     {
-        return view('register.php');
+        // nanti diganti jadi query ke database
+        if (!empty($_COOKIE['account_created'])) {
+            return redirect()->to('/Account');
+        } else {
+            return view('register.php');
+        }
     }
 }
