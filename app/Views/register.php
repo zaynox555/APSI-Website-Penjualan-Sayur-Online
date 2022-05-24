@@ -35,7 +35,7 @@
             </div>
 
             <div class="col w-100">
-              <button type="submit" class="btn btn-success w-100">Daftar</button>
+              <button type="submit" name="register" class="btn btn-success w-100">Daftar</button>
             </div>
           </form>
         </div>
