@@ -35,7 +35,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'olshop',
+        'database' => 'green_groceries',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

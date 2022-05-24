@@ -14,18 +14,16 @@ class Login extends BaseController
             $this->authenticate();
         }
 
-        return view('login.php');
+        $data = [
+            'error' => \Config\Services::validation()->getErrors(),
+        ];
+        return view('login.php', $data);
     }
 
     private function authenticate()
     {
-
-        if ($this->validate([
-            'email' => 'required|valid_email',
-            'password' => 'required',
-        ])) {
-            $userModel = model('User');
-            $email = $this->request->getPost('username');
+        if ($this->validate(['email' => 'required|valid_email|is_not_unique[user.email]'])) {
+            $email = $this->request->getPost('email');
             $pw = $this->request->getPost('password');
 
             if ($email == 'green.grocery@admin.com' && $pw == 'admin') {
@@ -33,15 +31,17 @@ class Login extends BaseController
                 return redirect()->to('/Admin');
             }
 
-            if ($user = $userModel->GetUser($email)) {
-                if (password_verify($pw, $user->password)) {
-                    session()->set('login_status', 'true');
-                    session()->set('user_id', $user->id);
+            if ($user = model('user')->GetUser($email)) {
+                if (password_verify($pw, $user['password'])) {
+                    session()->set('login_status', $user['id']);
                     return redirect()->to('/');
                 }
+                session()->setFlashdata('pwError', 'Password salah');
+                return redirect()->to('/Login')->withInput();
             }
+            return redirect()->to('/Login')->with('emailError', 'Email tidak ditemukan');
         }
 
-        return redirect()->to('/Login')->with('error', 'Invalid Email or Password');
+        return redirect()->to('/Login');
     }
 }
