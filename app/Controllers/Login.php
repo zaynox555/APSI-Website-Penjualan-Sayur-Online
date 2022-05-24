@@ -6,7 +6,7 @@ class Login extends BaseController
 {
     public function index()
     {
-        if (isset($_COOKIE['login_status'])) {
+        if (isset($_SESSION['login_status'])) {
             return redirect()->to('/');
         }
 
@@ -36,9 +36,10 @@ class Login extends BaseController
                     session()->set('login_status', $user['id']);
                     return redirect()->to('/');
                 }
-                session()->setFlashdata('pwError', 'Password salah');
-                return redirect()->to('/Login')->withInput();
+
+                return redirect()->to('/Login')->withInput()->with('pwError', 'Password salah');
             }
+
             return redirect()->to('/Login')->with('emailError', 'Email tidak ditemukan');
         }
 

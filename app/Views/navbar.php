@@ -17,7 +17,7 @@
       <ul class="navbar-nav mb-2 mb-lg-0 fs-5">
 
         <li class="nav-item" title="Keranjang">
-          <a class="nav-link active" href="/Cart/">
+          <a class="nav-link active" href="/Cart">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
           </a>
         </li>
@@ -25,7 +25,7 @@
         <li class="vr mx-2 text-white"></li>
 
         <li class="nav-item" title="Pengiriman">
-          <a class="nav-link active" href="/Delivery/">
+          <a class="nav-link active" href="/Delivery">
             <i class="fa fa-truck" aria-hidden="true"></i>
           </a>
         </li>
@@ -33,8 +33,16 @@
         <li class="vr mx-2 text-white"></li>
 
         <li class="nav-item" title="Akun">
-          <a class="nav-link active" href="/Account/">
+          <a class="nav-link active" href="/Account">
             <i class="fa fa-user-circle" aria-hidden="true"></i>
+          </a>
+        </li>
+
+        <li class="vr mx-2 text-white"></li>
+
+        <li class="nav-item" title="Keluar">
+          <a class="nav-link active" href="/Logout">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
           </a>
         </li>
 

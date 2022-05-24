@@ -7,7 +7,7 @@
   <?php for ($j = 0; $j < 3; $j++) : ?>
     <div class="storefront-group">
       <div class="row row-cols-2 row-cols-md-3 m-2 mt-4 g-3">
-        <div class="w-100 my-3 text-center h4"><?= 'ETALASE ' . ($j + 1) ?></div>
+        <div class="w-100 my-3 text-center h4"><?= 'JENIS ' . ($j + 1) ?></div>
 
         <?php for ($i = 0; $i < 5; $i++) : ?>
           <div class="col">

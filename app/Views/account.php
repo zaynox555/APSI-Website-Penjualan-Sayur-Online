@@ -10,28 +10,28 @@
           <form class="row row-cols-1 row-cols-lg-2 g-4" method="POST">
 
             <div class="col">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" name="email" required>
+              <label for="email" class="form-label">Email</label>
+              <input type="email" name="email" class="form-control" id="email" required>
             </div>
 
             <div class="col">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" id="password" name="password" required>
+              <label for="password" class="form-label">Password</label>
+              <input type="password" name="password" class="form-control" id="password" required>
             </div>
 
             <div class="col">
-              <label for="nama">Nama</label>
-              <input type="text" class="form-control" id="nama" name="nama" required>
+              <label for="nama" class="form-label">Nama</label>
+              <input type="text" name="nama" class="form-control" id="nama" required>
             </div>
 
             <div class="col">
-              <label for="nohp">Nomor Telepon</label>
-              <input type="text" class="form-control" id="nohp" name="nohp" required>
+              <label for="nohp" class="form-label">Nomor Telepon</label>
+              <input type="text" name="nohp" class="form-control" id="nohp" required>
             </div>
 
             <div class="col w-100">
-              <label for="alamat">Alamat</label>
-              <textarea class="form-control" id="alamat" name="alamat" rows="3" required></textarea>
+              <label for="alamat" class="form-label">Alamat</label>
+              <textarea name="alamat" class="form-control" id="alamat" rows="3" required></textarea>
             </div>
 
             <div class="col w-100">
