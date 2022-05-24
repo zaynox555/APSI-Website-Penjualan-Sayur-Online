@@ -19,7 +19,7 @@ class Register extends BaseController
     {
         if ($this->validate([
             'email' => 'required|valid_email',
-            'nohp' => 'required|numeric|min_length[10]|max_length[15]',
+            'nohp' => 'required|numeric|min_length[10]|max_length[12]',
             'password' => 'required|min_length[8]',
             'confirmation' => 'required|matches[password]',
             'nama' => 'required|alpha_space|max_length[100]',
@@ -29,7 +29,7 @@ class Register extends BaseController
             $pw = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT);
             model('user')->registerUser([
                 'email' => $email,
-                'nohp' => $this->request->getPost('nohp'),
+                'nohp' => '+62' . $this->request->getPost('nohp'),
                 'password' => $pw,
                 'nama' => $this->request->getPost('nama'),
                 'alamat' => $this->request->getPost('alamat'),

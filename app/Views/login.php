@@ -16,13 +16,13 @@
             <h5 class="card-title text-center mb-3">Login</h5>
             <form class="row row-cols-1 g-0" method="POST">
               <div class="col mb-3">
-                <label for="email">Email</label>
+                <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="<?= old('email') ?>">
                 <span class="form-text text-danger"><?= (isset($error['email'])) ? $error['email'] : session()->getFlashdata('emailError') ?></span>
               </div>
               <div class="col mb-4">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" name="password">
                 <span class="form-text text-danger"><?= (isset($error['password'])) ? $error['password'] : session()->getFlashdata('pwError') ?></span>
               </div>
               <div class="col">

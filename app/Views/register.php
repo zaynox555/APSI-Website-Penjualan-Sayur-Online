@@ -10,38 +10,41 @@
           <form class="row row-cols-1 row-cols-lg-2 g-4" method="POST">
 
             <div class="col">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" name="email" value="<?= old('email') ?>">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" id="email" value="<?= old('email') ?>">
               <div class="form-text text-danger"><?= (isset($error['email'])) ? $error['email'] : '' ?></div>
             </div>
 
             <div class="col">
-              <label for="nohp">Nomor Telepon</label>
-              <input type="text" class="form-control" id="nohp" name="nohp" value="<?= old('nohp') ?>">
+              <label for="nohp" class="form-label">Nomor Telepon</label>
+              <div class="input-group">
+                <span class="input-group-text" id="countryNumber">+62</span>
+                <input type="text" class="form-control" name="nohp" id="nohp" value="<?= old('nohp') ?>" aria-describedby="countryNumber">
+              </div>
               <div class="form-text text-danger"><?= (isset($error['nohp'])) ? $error['nohp'] : '' ?></div>
             </div>
 
             <div class="col">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" id="password" name="password">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" name="password" id="password">
               <div class="form-text text-danger"><?= (isset($error['password'])) ? $error['password'] : '' ?></div>
             </div>
 
             <div class="col">
-              <label for="confirmation">Confirm Password</label>
-              <input type="password" class="form-control" id="confirmation" name="confirmation">
+              <label for="confirmation" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" name="confirmation" id="confirmation">
               <div class="form-text text-danger"><?= (isset($error['confirmation'])) ? $error['confirmation'] : '' ?></div>
             </div>
 
             <div class="col w-100">
-              <label for="nama">Nama</label>
-              <input type="text" class="form-control" id="nama" name="nama" value="<?= old('nama') ?>">
+              <label for="nama" class="form-label">Nama</label>
+              <input type="text" class="form-control" name="nama" id="nama" value="<?= old('nama') ?>">
               <div class="form-text text-danger"><?= (isset($error['nama'])) ? $error['nama'] : '' ?></div>
             </div>
 
             <div class="col w-100">
-              <label for="alamat">Alamat</label>
-              <textarea class="form-control" id="alamat" name="alamat" rows="3"><?= old('alamat') ?></textarea>
+              <label for="alamat" class="form-label">Alamat</label>
+              <textarea class="form-control" name="alamat" id="alamat" rows="3"><?= old('alamat') ?></textarea>
               <div class="form-text text-danger"><?= (isset($error['alamat'])) ? $error['alamat'] : '' ?></div>
             </div>
 
