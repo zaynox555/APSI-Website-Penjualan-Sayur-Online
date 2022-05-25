@@ -15,13 +15,18 @@ class User extends Model
         return $this->where('email', $email)->first();
     }
 
-    public function getUserId($id)
+    public function getUserById($id)
     {
         return $this->where('id', $id)->first();
     }
 
-    public function registerUser($data)
+    public function saveUser($data)
     {
         return $this->save($data);
+    }
+
+    public function updateUser($whereId, $data)
+    {
+        return $this->update($whereId, $data);
     }
 }

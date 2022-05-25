@@ -27,7 +27,7 @@ class Register extends BaseController
         ])) {
             $email = $this->request->getPost('email');
             $pw = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT);
-            model('user')->registerUser([
+            model('user')->saveUser([
                 'email' => $email,
                 'nohp' => '+62' . $this->request->getPost('nohp'),
                 'password' => $pw,

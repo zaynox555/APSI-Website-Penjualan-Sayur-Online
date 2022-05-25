@@ -11,31 +11,42 @@
 
             <div class="col">
               <label for="email" class="form-label">Email</label>
-              <input type="email" name="email" class="form-control" id="email" required>
-            </div>
-
-            <div class="col">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" name="password" class="form-control" id="password" required>
-            </div>
-
-            <div class="col">
-              <label for="nama" class="form-label">Nama</label>
-              <input type="text" name="nama" class="form-control" id="nama" required>
+              <input type="email" name="email" class="form-control" id="email" value="<?= $user['email'] ?>">
+              <div class="form-text text-danger"><?= (isset($error['email'])) ? $error['email'] : '' ?></div>
             </div>
 
             <div class="col">
               <label for="nohp" class="form-label">Nomor Telepon</label>
-              <input type="text" name="nohp" class="form-control" id="nohp" required>
+              <input type="text" name="nohp" class="form-control" id="nohp" value="<?= $user['nohp'] ?>">
+              <div class="form-text text-danger"><?= (isset($error['nohp'])) ? $error['nohp'] : '' ?></div>
+            </div>
+
+            <div class="col">
+              <label for="password" class="form-label">Password Baru</label>
+              <input type="password" name="password" class="form-control" id="password">
+              <div class="form-text text-danger"><?= (isset($error['password'])) ? $error['password'] : '' ?></div>
+            </div>
+
+            <div class="col">
+              <label for="confirmation" class="form-label">Konfirmasi Password Baru</label>
+              <input type="password" name="confirmation" class="form-control" id="confirmation">
+              <div class="form-text text-danger"><?= (isset($error['confirmation'])) ? $error['confirmation'] : '' ?></div>
+            </div>
+
+            <div class="col w-100">
+              <label for="nama" class="form-label">Nama</label>
+              <input type="text" name="nama" class="form-control" id="nama" value="<?= $user['nama'] ?>">
+              <div class="form-text text-danger"><?= (isset($error['nama'])) ? $error['nama'] : '' ?></div>
             </div>
 
             <div class="col w-100">
               <label for="alamat" class="form-label">Alamat</label>
-              <textarea name="alamat" class="form-control" id="alamat" rows="3" required></textarea>
+              <textarea name="alamat" class="form-control" id="alamat" rows="3"><?= $user['alamat'] ?></textarea>
+              <div class="form-text text-danger"><?= (isset($error['alamat'])) ? $error['alamat'] : '' ?></div>
             </div>
 
             <div class="col w-100">
-              <button type="submit" class="btn btn-success w-100">Simpan Perubahan</button>
+              <button type="submit" name="save" class="btn btn-success w-100">Simpan Perubahan</button>
             </div>
           </form>
         </div>

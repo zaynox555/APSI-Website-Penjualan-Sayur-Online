@@ -24,7 +24,7 @@
   <!-- JQuery based Script -->
   <script type="text/javascript" src="<?= base_url('assets/js/main.js') ?>"></script>
 
-  <title>GREEENY</title>
+  <title>Green Groceries</title>
 </head>
 
 <body>
