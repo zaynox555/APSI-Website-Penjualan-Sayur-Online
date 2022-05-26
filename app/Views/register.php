@@ -7,9 +7,9 @@
       <div class="card rounded-3">
         <div class="card-body">
           <h4 class="card-title text-center mb-3">Pendaftaran</h4>
-          <form class="row row-cols-1 row-cols-lg-2 g-4" method="POST" action="/Register/processing">
+          <form class="row row-cols-1 row-cols-lg-2 g-4" method="POST">
 
-            <div class="col">
+            <div class=" col">
               <label for="email" class="form-label">Email</label>
               <input type="email" class="form-control" name="email" id="email" value="<?= old('email') ?>">
               <div class="form-text text-danger"><?= (isset($error['email'])) ? $error['email'] : '' ?></div>

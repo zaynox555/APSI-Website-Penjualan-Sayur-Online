@@ -16,7 +16,7 @@ class Login extends BaseController
         return view('login.php', $data);
     }
 
-    public function authenticate()
+    private function authenticate()
     {
         $email = $this->request->getPost('email');
         $pw = $this->request->getPost('password');

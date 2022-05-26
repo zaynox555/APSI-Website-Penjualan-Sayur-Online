@@ -50,4 +50,9 @@ class BaseController extends Controller
 
         // E.g.: $this->session = \Config\Services::session();
     }
+
+    protected function client_session_check()
+    {
+        if (!session()->has('login_status')) return redirect()->to('/Login');
+    }
 }

@@ -6,13 +6,10 @@ class Account extends BaseController
 {
     public function index()
     {
-        if (!session()->has('login_status')) {
-            return redirect()->to('/Login');
-        }
+        $this->client_session_check();
 
-        if (isset($_POST['save'])) {
-            $this->saveChange();
-        }
+        if (isset($_POST['save'])) return $this->saveChange();
+
         $data = [
             'error' => \Config\Services::validation()->getErrors(),
             'user' => model('User')->getUserById(session()->get('login_status')),

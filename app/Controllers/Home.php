@@ -6,10 +6,7 @@ class Home extends BaseController
 {
     public function index()
     {
-        if (!isset($_SESSION['login_status'])) {
-            return redirect()->to('/Login');
-        }
-
+        $this->client_session_check();
         return view('home.php');
     }
 }
