@@ -7,7 +7,7 @@
       <div class="card rounded-3">
         <div class="card-body">
           <h4 class="card-title text-center mb-3">Pendaftaran</h4>
-          <form class="row row-cols-1 row-cols-lg-2 g-4" method="POST">
+          <form class="row row-cols-1 row-cols-lg-2 g-4" method="POST" action="/Register/processing">
 
             <div class="col">
               <label for="email" class="form-label">Email</label>

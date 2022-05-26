@@ -8,7 +8,7 @@ class Login extends BaseController
     {
         if (session()->has('admin_login')) return redirect()->to('/Admin');
         if (session()->has('login_status')) return redirect()->to('/');
-        if (isset($_POST['login']))  $this->authenticate();
+        if (isset($_POST['login']))  return $this->authenticate();
 
         $data = [
             'error' => \Config\Services::validation()->getErrors(),
@@ -16,7 +16,7 @@ class Login extends BaseController
         return view('login.php', $data);
     }
 
-    private function authenticate()
+    public function authenticate()
     {
         $email = $this->request->getPost('email');
         $pw = $this->request->getPost('password');

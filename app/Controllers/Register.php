@@ -6,9 +6,7 @@ class Register extends BaseController
 {
     public function index()
     {
-        if (isset($_POST['register'])) {
-            $this->register();
-        }
+        if (isset($_POST['register'])) return $this->register();
         $data = [
             'error' => \Config\Services::validation()->getErrors(),
         ];
