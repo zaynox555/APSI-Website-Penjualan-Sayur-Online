@@ -33,7 +33,7 @@ class Register extends BaseController
                 'alamat' => $this->request->getPost('alamat'),
             ]);
 
-            session()->set('login_status', model('user')->getUserId($email));
+            session()->set('login_status', model('user')->getUserById($email));
             return redirect()->to('/');
         }
 
