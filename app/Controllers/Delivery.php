@@ -6,7 +6,7 @@ class Delivery extends BaseController
 {
     public function index()
     {
-        $this->client_session_check();
+        if (!session()->has('login_status')) return redirect()->to('/Login');
         return view('delivery.php');
     }
 }

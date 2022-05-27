@@ -6,8 +6,7 @@ class Account extends BaseController
 {
     public function index()
     {
-        $this->client_session_check();
-
+        if (!session()->has('login_status')) return redirect()->to('/Login');
         if (isset($_POST['save'])) return $this->saveChange();
 
         $data = [
