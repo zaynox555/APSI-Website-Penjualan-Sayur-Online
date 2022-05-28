@@ -13,7 +13,7 @@ class Account extends BaseController
             'error' => \Config\Services::validation()->getErrors(),
             'user' => model('User')->getUserById(session()->get('login_status')),
         ];
-        return view('account.php', $data);
+        return view('account', $data);
     }
 
     private function saveChange()

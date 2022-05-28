@@ -13,7 +13,7 @@ class Login extends BaseController
         $data = [
             'error' => \Config\Services::validation()->getErrors(),
         ];
-        return view('login.php', $data);
+        return view('login', $data);
     }
 
     private function authenticate()

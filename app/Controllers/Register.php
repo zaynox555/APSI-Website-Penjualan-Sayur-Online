@@ -10,7 +10,7 @@ class Register extends BaseController
         $data = [
             'error' => \Config\Services::validation()->getErrors(),
         ];
-        return view('register.php', $data);
+        return view('register', $data);
     }
 
     private function register()
