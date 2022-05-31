@@ -6,7 +6,6 @@ class Admin extends BaseController
 {
     public function index()
     {
-        if (isset($_POST['SaveAsPdf'])) return $this->saveAsPdf();
         $this->admin_session_check();
         return view('admin-home');
     }
@@ -17,15 +16,17 @@ class Admin extends BaseController
         return view('admin-produk');
     }
 
-    private function saveAsPdf()
+    public function pdf()
     {
-        $data = [
-            'title' => 'Laporan Penjualan',
-            'data' => model('Penjualan')->getBetweenDate(),
-        ];
+        return view('laporan-pdf');
+    }
+
+    public function saveAsPdf()
+    {
+        $data['data'] = model('Penjualan')->getAll();
         $dompdf = new \Dompdf\Dompdf();
-        $dompdf->loadHtml(view('pdf-view', $data));
-        $dompdf->setPaper('A4');
+        $dompdf->loadHtml(view('laporan-pdf', $data));
+        $dompdf->setPaper('A4', 'landscape');
         $dompdf->render();
         $dompdf->stream('Laporan Penjualan.pdf');
     }

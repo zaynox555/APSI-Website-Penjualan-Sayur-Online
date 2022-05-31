@@ -9,7 +9,7 @@
     <div class="card-body">
       <div class="mb-3">
         <form method="post">
-          <button type="submit" name="SaveAsPdf" class="btn btn-sm btn-success">Save as PDF</button>
+          <a href="/Admin/saveAsPdf" class="btn btn-sm btn-success">Save as PDF</a>
         </form>
       </div>
       <table class="table table-sm table-bordered table-striped table-hover">

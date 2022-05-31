@@ -8,7 +8,7 @@ class Penjualan extends Model
 {
     protected $table = 'penjualan';
 
-    protected $allowedFields = [];
+    protected $allowedFields = ['tanggal', 'kode_pesanan', 'id_produk', 'kuantitas', 'total'];
 
     public function getAll()
     {
